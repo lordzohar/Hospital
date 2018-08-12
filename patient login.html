@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script src="js/script.js"></script>
+<ul>
+  <li>
+    <a href="#">
+      <span class="span-logo">
+        <img src="image/index.png" id="hos1">
+      </span>
+    </a>
+  </li>
+  <li><a class="active" href="index.html">Home</a></li>
+  
+  <li><a href="checklog.php">Doctor's Schedule</a></li>
+  <li class="swag"><a href="login.html">Logout</a></li>
+  <li class="swag"><a href="myaccount.php">My Account</a></li>
+ 
+</ul>
+
+
+
+<div class="placement">
+<h1 style="
+    padding-left: 35%;"> Patient form</h1>
+
+  <form class="modal-content" id="form-shower" action="action.php" method="post">
+    
+    <div class="container">
+      <label><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
+
+      <label><b>Address</b></label>
+      <input type="textarea" placeholder="Enter Address" name="address" required>
+      
+       <label><b>E-mail</b></label>
+      <input type="textarea" placeholder="Enter E-mail" name="e-mail" required>
+
+      <label><b>Mobile</b></label>
+      <input type="number" placeholder="Enter Mobile Number" name="mobile" required>
+
+      <label class="dept"><b>Department</b></label>
+    <select name="dept" required id="choose">
+    <option value="None selected">Please select below</option>
+    <option value="Pathology">Pathology</option>
+    <option value="Cardiology">Cardiology</option>
+    <option value="X-Rays">X-Rays</option>
+    <option value="Sonography">Sonography</option>
+    etc.
+    </select>
+
+      
+      <div class="appoint">
+      <label id="app1"><b>Appointment Date</b></label>
+    <input type="date" id="dateapp" placeholder="Enter Appointment Date" name="adate" onblur="myFunction()" required>
+        </div>
+ 
+ 
+  <label class="time"><b>Appointment Time</b></label>
+     <select name="time" required >
+    <option value="10am-11am">10 am - 11 am</option>
+    <option value="12pm-1pm">12 pm - 1 pm</option>
+    <option value="3pm-4pm">3 pm - 4 pm</option>
+    <option value="5pm-6pm">5 pm - 6 pm</option>
+    etc.
+    </select>
+      
+      <div class="gender">
+      <input type="checkbox" checked="checked" name="gen" value="M"> Male
+      <input type="checkbox" name="gen"value="F"> Female
+      </div>
+      
+       
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" ">Cancel</button>
+        <button type="submit" class="signupbtn">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+</body>
+</html>

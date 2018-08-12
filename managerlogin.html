@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN</title>
+       
+    
+    </head> 
+    <body>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<ul>
+  <li>
+    <a href="#">
+      <span class="span-logo">
+        <img src="image/index.png" id="hos1">
+      </span>
+    </a>
+  </li>
+  <li><a class="active" href="index.html">Home</a></li>
+ 
+  
+  <li class="left"><a href="managerregister.html">Register</a></li>
+   
+
+</ul>
+        <br>
+        <br>
+        <br>
+          <div class="placement">
+       <h1 style="
+    padding-left: 40%;">Manager LOGIN</h1>
+      
+        
+  
+        <form class="modal-content" action="managerlogin.php" method="post">
+    
+    <div class="container">
+    
+
+      <label><b>Mobile</b></label>
+      <input type="number" placeholder="Enter Mobile Number" name="mobile" required>
+
+        <label><b>Password</b></label>
+      <input type="Password" placeholder="Enter Password" name="pass" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Submit</button>
+      </div>
+      </div>
+      
+      </form>
+      </div>
+      </body>
+      </html>
+
+<!--script>
+
+      var cname = document.getElementById("name");
+      cname.addEventListener('blur',checkname,false); 
+   
+      function checkname(e) {
+         var element=e.target;
+		 if(element.value==""||element.value== null)
+			 {
+			     alert("This feild cannot be empty");
+              
+                 return false;
+			 }
+         if(/[^a-zA-Z]/.test(element.value)){
+            alert("invalid name!only character a to z and A to Z are allowed");
+            element.value="";
+            return false;
+
+         }
+          if(element.value.length<3)
+          {
+            alert("invalid name! it should contain atleast 3 alphabets");
+            element.value="";
+            return false;
+          }
+          return true;
+      }
+	  
+	  var mail = document.getElementById("email");
+        mail.addEventListener('blur',checkmail,false);
+
+      function checkmail(e)
+            {
+          var element=e.target;
+		if(element.value==""||element.value== null)
+			 {
+			     alert("This feild cannot be empty");
+                 return false;
+			 }
+		  if(/[^a-zA-Z0-9_.@]/.test(element.value))
+          {
+
+            alert(" !invlid email! do not make use of special character. ");
+            element.value="";
+            return false;
+
+          }
+          if(!/[@]/.test(element.value))
+          {
+
+            alert(" !invlid email!  @ missing ");
+            element.value="";
+            return false;
+
+          }
+
+          if(!/[.]/.test(element.value))
+          {
+
+            alert(" !invlid email!  [.] dot missing ");
+            element.value="";
+            return false;
+
+          }*/
+		return true;  
+ 
+      }
+	 
+</script-->	
+   
+    
+

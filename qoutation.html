@@ -1,0 +1,75 @@
+<html>
+	<title>QUOTATION FORM</title>
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>	
+	
+	
+	<body>
+
+<div class="placement">
+<h1 style="
+    padding-left: 35%;"> Qoutation form</h1>
+
+  <form class="modal-content" id="form-shower" action="qoutation.php" method="post">
+    
+    <div class="container">
+      <label><b>COMPANY</b></label>
+      <input type="text" placeholder="Enter Name" name="company" required>
+
+    <label class="dept"><b>Items</b></label>
+    <select name="item" required id="choose">
+    <option value="None selected">Please select below</option>
+    <option value="Crocin">Crocin</option>
+    <option value="Aspirin">Aspirin</option>
+    <option value="Diclogem">Diclogem</option>
+    <option value="Dispirin">Dispirin</option>
+    etc.
+    </select>
+
+
+
+<br>
+<br>
+
+      <label><b>Quantity</b></label>
+      <input type="textarea" placeholder="Enter Quantity" name="quantity" id="quantity"  required>
+      
+       <label><b>PRICE PER ITEM</b></label>
+      <input type="text" placeholder="Enter Total" name="total" id="cBalance" required value="">
+
+      <label><b>Discount</b></label>
+      <input type="text" placeholder="Enter Discount" name="discount" id="chDiscount" required>
+
+      <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+      <script>
+      $(document).on("change keyup blur", "#chDiscount", function() {
+      var qty  = $('#quantity').val();
+      var bal = $('#cBalance').val();
+      var main = qty*bal;
+      var disc = $('#chDiscount').val();
+      var dec = (disc/100).toFixed(2); //its convert 10 into 0.10
+      var mult = main*dec; // gives the value for subtract from main value
+      var discont = main-mult;
+      $('#result').val(discont);
+      });
+      </script>
+      <label><b>Final Amount</b></label>
+      <input type="text" placeholder="Enter Final Amount" name="amount" id="result" readonly>
+      
+      
+     
+      
+       
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" ">Cancel</button>
+        <button type="submit" class="signupbtn">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
+
